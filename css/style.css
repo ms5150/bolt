@@ -4,6 +4,10 @@ body {
   font-family: Lato;
 }
 
+.font-f-Raleway {
+  font-family: Raleway;
+}
+
 .clearfix::after {
   clear: both;
   content: "";
@@ -12,6 +16,7 @@ body {
 
 .inner {
   width: 1100px;
+  margin: 0 auto;
 }
 
 .header {
@@ -23,8 +28,8 @@ body {
 }
 
 .header-inner {
-  margin: 0 auto;
   padding: 15px;
+  box-sizing: border-box;
 }
 
 .header__logo {
@@ -50,7 +55,7 @@ body {
   float:right;
   font-size: 25px;
   padding: 10px;
-  opacity: 0;
+  display: none;
 }
 
 .header__btn:hover {
@@ -66,7 +71,6 @@ body {
 }
 
 .title-inner {
-  margin: 0 auto;
   padding: 250px 0 250px 0;
   text-align: center;
 }
@@ -90,7 +94,6 @@ body {
 .explanation-inner {
   color: #fff;
   display: flex;
-  margin: 0 auto;
   padding-top: 50px;
 }
 
@@ -100,7 +103,6 @@ body {
 }
 
 .explanation__heading {
-  font-family: Raleway;
   font-size: 24px;
   margin-bottom: 35px;
   text-align: center;
@@ -117,13 +119,11 @@ body {
 }
 
 .portfolio-inner {
-  margin: 0 auto;
   padding: 60px 0 70px 0;
 }
 
 .portfolio__heading {
   color: #333;
-  font-family: Raleway;
   font-size: 24px;
   margin-bottom: 40px;
   text-align: center;
@@ -133,7 +133,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* margin: -40px -50px; */
 }
 
 .portfolio__img {
@@ -165,7 +164,6 @@ body {
 
 .portfolio__mail__text {
   color: #333;
-  font-family: Raleway;
   text-align: center;
 }
 
@@ -190,7 +188,6 @@ body {
 }
 
 .skils-inner {
-  margin: 0 auto;
   padding-top: 70px;
   padding-bottom: 100px;
 }
@@ -230,7 +227,6 @@ body {
   display: flex;
   font-size: 45px;
   justify-content: center;
-  margin: 0 auto;
   padding: 200px 0;
 }
 
@@ -262,35 +258,38 @@ body {
 
 
 
-
-
-
 @media (max-width: 1199px){
-  .header-inner, .title-inner, .explanation-inner, .portfolio-inner, .skils-inner, .social-inner, .footer-inner {
+  .inner {
     width: 97%;
+    margin: 0 auto;
   }
 
   .explanation-inner {
     flex-direction: column;
+    padding-bottom: 25px;
+  }
+
+  .explanation__img__wrapper {
+    margin: 0 auto;
   }
 
   .explanation__text__wrapper {
-    margin: 0;
-    padding: 20px 0 25px 0;
+    margin: 0 auto;
+    padding-top: 20px;
     width: 80%;
   }
 
   .portfolio__img__wrapper {
     align-items: center;
     flex-direction: column;
-    margin: 0;
+    line-height: 0;
   }
 
   .portfolio__img {
     margin: 0;
   }
 
-  .portfolio__img:nth-child(3) {
+  .portfolio__img:nth-child(3n+3) {
     margin-bottom: 80px;
   }
 
@@ -302,7 +301,7 @@ body {
   }
 
   .portfolio__mail__text {
-    margin: 80px 0 40px 0;
+    margin-bottom: 40px;
   }
 
   .portfolio__mail__btn {
@@ -323,7 +322,11 @@ body {
   }
 
   .skils__item:nth-child(1) {
-    margin: 0 auto 88px auto;
+    margin-left: auto;
+  }
+
+  .social__icon {
+    width: 25%;
   }
 
 }
@@ -334,11 +337,11 @@ body {
   }
 
   .header__menu {
-    opacity: 1;
+    display: block;
   }
 
   .title-inner {
-    padding: 237px 0 130px 0;
+    padding: 160px 0 130px 0;
   }
 
   .title__copy {
