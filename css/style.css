@@ -320,7 +320,7 @@ footer {
     font-size: 80px;
   }
 
-  .br::before {
+  .title_br::before {
 	content: "\A" ;
 	white-space: pre ;
   }
