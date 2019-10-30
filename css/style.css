@@ -14,7 +14,7 @@ body {
   width: 1100px;
 }
 
-header {
+.header {
   background-color: #fff;
   position: fixed;
   top: 0;
@@ -57,16 +57,18 @@ header {
   color: #333;
 }
 
+.main {
+  padding-top: 77px;
+}
+
 .title {
   background-color: #f2f2f2;
-  width: 100%;
 }
 
 .title-inner {
   margin: 0 auto;
-  padding: 327px 0 250px 0;
+  padding: 250px 0 250px 0;
   text-align: center;
-  width: 100%;
 }
 
 .title__copy {
@@ -83,11 +85,9 @@ header {
 
 .explanation {
   background-color: #74cfae;
-  width: 100%;
 }
 
 .explanation-inner {
-  align-items: center;
   color: #fff;
   display: flex;
   margin: 0 auto;
@@ -99,25 +99,21 @@ header {
   text-align: center;
 }
 
-.explanation__text__wrapper {
-  margin: 0 0 90px 0;
-  text-align: center;
-}
-
 .explanation__heading {
   font-family: Raleway;
   font-size: 24px;
   margin-bottom: 35px;
+  text-align: center;
 }
 
 .explanation__text {
   font-size: 20px;
   line-height: 28px;
+  text-align: center;
 }
 
 .portfolio {
   background-color: #f2f2f2;
-  width: 100%;
 }
 
 .portfolio-inner {
@@ -137,13 +133,22 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: -40px -50px;
+  /* margin: -40px -50px; */
 }
 
 .portfolio__img {
-  margin: 40px 50px;
+  margin-top: 80px;
+  margin-left: 100px;
   opacity: 0.7;
   transition: all 0.3s;
+}
+
+.portfolio__img:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+.portfolio__img:nth-child(-n+3) {
+  margin-top: 0;
 }
 
 .portfolio__img:hover {
@@ -155,7 +160,7 @@ header {
   display: flex;
   margin: 0 auto;
   margin-top: 90px;
-  padding: 0 210px;
+  width: 62%;
 }
 
 .portfolio__mail__text {
@@ -182,32 +187,38 @@ header {
 
 .skils {
   background-color: #4e4e4e;
-  width: 100%;
 }
 
 .skils-inner {
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+.skils__wrapper {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  padding-bottom: 100px;
 }
 
 .skils__heading {
   color: #fff;
   font-size: 24px;
-  padding-bottom: 70px;
-  padding-top: 70px;
+  margin-bottom: 70px;
   text-align:center;
 }
 
-.skils__wrapper {
+.skils__item {
   color: #fff;
-  margin: 0 90px;
-  text-align: center;
+  margin-left: 180px;
+}
+
+.skils__item:nth-child(1) {
+  margin-left: 0;
 }
 
 .skils__text {
   margin-top: 10px;
+  text-align: center;
 }
 
 .social {
@@ -235,7 +246,7 @@ header {
   background-color: #fff;
 }
 
-footer {
+.footer {
   background-color: #74cfae;
   width: 100%;
 }
@@ -286,7 +297,7 @@ footer {
   .portfolio__mail {
     flex-direction: column;
     justify-content: center;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
   }
 
@@ -299,11 +310,20 @@ footer {
   }
 
   .skils-inner {
-    flex-direction: column;
+    padding-bottom: 0;
   }
 
   .skils__wrapper {
-    margin-bottom: 88px;
+    flex-direction: column;
+  }
+
+
+  .skils__item {
+    margin: 0 auto 88px auto;
+  }
+
+  .skils__item:nth-child(1) {
+    margin: 0 auto 88px auto;
   }
 
 }
@@ -328,10 +348,6 @@ footer {
   .title_br::before {
 	content: "\A" ;
 	white-space: pre ;
-  }
-
-  .skils-inner {
-    padding: 0;
   }
 
   .social-inner {
