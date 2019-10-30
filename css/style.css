@@ -43,6 +43,16 @@ header {
   transition: all 0.3s;
 }
 
+.header__menu {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #ddd;
+  float:right;
+  font-size: 25px;
+  padding: 10px;
+  opacity: 0;
+}
+
 .header__btn:hover {
   color: #333;
 }
@@ -304,12 +314,7 @@ footer {
   }
 
   .header__menu {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    color: #ddd;
-    float:right;
-    font-size: 25px;
-    padding: 10px;
+    opacity: 1;
   }
 
   .title-inner {
