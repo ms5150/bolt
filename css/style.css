@@ -47,17 +47,6 @@ header {
   color: #333;
 }
 
-.header__menu {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  color: #ddd;
-  float:right;
-  font-size: 25px;
-  opacity: 0;
-  padding: 10px;
-}
-
-
 .title {
   background-color: #f2f2f2;
   width: 100%;
@@ -315,7 +304,12 @@ footer {
   }
 
   .header__menu {
-    opacity: 1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #ddd;
+    float:right;
+    font-size: 25px;
+    padding: 10px;
   }
 
   .title-inner {
