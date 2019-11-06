@@ -157,8 +157,7 @@ body {
 .portfolio__mail {
   align-items: center;
   display: flex;
-  margin: 0 auto;
-  margin-top: 90px;
+  margin: 90px auto 0;
   width: 62%;
 }
 
